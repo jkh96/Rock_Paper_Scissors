@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection) {
   if (
     (playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'paper' && computerSelection == 'rock') ||
-    (playerSelection == 'scissor' && computerSelection == 'paper')) 
+    (playerSelection == 'scissors' && computerSelection == 'paper')) 
     {
       console.log('player chose ' + playerSelection + ' and computer chose ' + computerSelection)
       userScore++;
@@ -30,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (
       (playerSelection == 'rock' && computerSelection == 'paper') ||
       (playerSelection == 'paper' && computerSelection == 'scissors') ||
-      (playerSelection == 'scissor' && computerSelection == 'rock'))
+      (playerSelection == 'scissors' && computerSelection == 'rock'))
       {
         console.log('player chose ' + playerSelection + ' and computer chose ' + computerSelection)
         console.log("You lose!");
