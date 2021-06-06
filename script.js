@@ -44,6 +44,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
+    alert("Let's play Rock Paper Scissors!")
   for (i = 0; i < 5; i++) {
     userInput = prompt("choose your weapon");
     playerSelection = userInput.toLowerCase()
