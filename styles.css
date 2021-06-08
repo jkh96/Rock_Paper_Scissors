@@ -1,5 +1,67 @@
 .grid {
     display: grid;
-    grid-template-columns: auto auto auto ;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: 100px 220px 150px 100px;
+    row-gap: 10px;
+}
+
+header {
+    grid-column: 1 / 4;
+    text-align: center;
+}
+
+#score {
+    grid-column: 1/4;
+    grid-row: 2 / 3;
+    font-size: 25px;
+}
+
+#score h3 {
+    text-align: center;
+}
+
+#user-score {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin: auto;
+    font-size: 25px;
+}
+
+#computer-score {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    margin: auto;
+    font-size: 25px;
+}
+
+#rock {
+    grid-column:  1 / 2;
+    grid-row: 3 / 4;
+    margin: auto;
+}
+
+#paper {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    margin: auto;
+}
+
+#scissors {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    margin: auto;
+}
+
+#result {
+    grid-column: 2 / 3;
+    text-align: center;
+}
+
+#insert-result {
+    font-size: 20px;
+}
+
+#insert-result-2 {
+    margin-top: 10px;
+    font-size: 20px;
 }

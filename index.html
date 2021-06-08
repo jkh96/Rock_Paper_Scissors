@@ -11,33 +11,36 @@
 </head>
 <body>
     <div class="grid">
-        <div id="Title">
+        <header id="Title">
             <h1>Rock Paper Scissors!</h1>
-        </div>
+        </header>
 
-        <hr>
-
-        <div id="results">
+        <div id="score">
             <h3>Score</h3>
-            <div id="text-results"></div>
-            <div id="user-score">
-                <p>Player:</p>
-            </div>
-            <div id="computer-score">
-                <p>Computer:</p>
-            </div>
+        </div>
+        
+        <div id="user-score">
+            <p>Player: <span id="user-results"></span></p>
+        </div>
+        <div id="computer-score">
+            <p>Computer: <span id="computer-results"></span></p>
+        </div>
+        
+        <div id="rock">
+            <img src="/images/rock-neon.jpg" alt="rock-img" onclick="playRound('rock')">
         </div>
 
-        <div id="game-box">
-            <div id="rock">
-                <img src="/images/rock-neon.jpg" alt="rock-img">
-            </div>
-            <div id="paper">
-                <img src="/images/paper-neon.jpg" alt="paper-img">
-            </div>
-            <div id="scissors">
-                <img src="/images/scissors-neon.jpg" alt="scissors-img">
-            </div>
+        <div id="paper">
+            <img src="/images/paper-neon.jpg" alt="paper-img" onclick="playRound('paper')">
+        </div>
+
+        <div id="scissors">
+            <img src="/images/scissors-neon.jpg" alt="scissors-img" onclick="playRound('paper')">
+        </div>
+        <div id="result">
+            <h2>Results:</h2>
+            <div id="insert-result"></div>
+            <div id="insert-result-2"></div>
         </div>
     </div>
     <script src="/script.js"></script>

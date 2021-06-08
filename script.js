@@ -1,6 +1,8 @@
 // Rps Game
 
 let playerSelection, userInput, computerSelection, userScore=0, computerScore=0;
+document.getElementById('user-results').innerHTML = userScore
+document.getElementById('computer-results').innerHTML = computerScore
 
 // const choices = { 
 //     'rock': {'scissors': 1, 'rock': 0.5, 'paper': 0},
@@ -23,24 +25,21 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection == 'paper' && computerSelection == 'rock') ||
     (playerSelection == 'scissors' && computerSelection == 'paper')) 
     {
-      console.log('player chose ' + playerSelection + ' and computer chose ' + computerSelection)
       userScore++;
-      console.log("You won!");
-      console.log('user score = ' + userScore + " and computer score = " + computerScore )
+      document.getElementById('insert-result-2').innerHTML = "You won!"
     } else if (
       (playerSelection == 'rock' && computerSelection == 'paper') ||
       (playerSelection == 'paper' && computerSelection == 'scissors') ||
       (playerSelection == 'scissors' && computerSelection == 'rock'))
       {
-        console.log('player chose ' + playerSelection + ' and computer chose ' + computerSelection)
-        console.log("You lose!");
         computerScore++
-        console.log('user score = ' + userScore + " and computer score = " + computerScore )
+        document.getElementById('insert-result-2').innerHTML = "You lose!"        
       } else {
-        console.log('player chose ' + playerSelection + ' and computer chose ' + computerSelection)
-        console.log('You tied!')
-        console.log('user score = ' + userScore + " and computer score = " + computerScore )
+        document.getElementById('insert-result-2').innerHTML = "You Tied!"
       }
+      document.getElementById('user-results').innerHTML = userScore
+      document.getElementById('computer-results').innerHTML = computerScore
+      document.getElementById('insert-result').innerHTML = ('player chose ' + playerSelection + ' and computer chose ' + computerSelection)
 }
 
 function game() {
