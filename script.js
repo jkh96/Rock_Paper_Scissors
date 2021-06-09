@@ -40,6 +40,7 @@ function playRound(playerSelection, computerSelection) {
       document.getElementById('user-results').innerHTML = userScore
       document.getElementById('computer-results').innerHTML = computerScore
       document.getElementById('insert-result').innerHTML = ('player chose ' + playerSelection + ' and computer chose ' + computerSelection)
+      winner()
 }
 
 function game() {
@@ -63,5 +64,19 @@ function game() {
   } else {
       alert('You tied!');
       location.reload()
+  }
+}
+
+/* Create a disable feature for the buttons once the game is over or have a page transition up so
+so the buttons can no loner be clicked. checkout lookingcoolonavespa live preview on theodinproject.com
+foundations rock paper scissros page down at the bottom*/
+
+function winner(){
+  if(userScore == 5) {
+    alert("You won the game!!");
+    alert('press F5 for Windows and CMD + R for mac to refresh the page');
+  } else if (computerScore == 5) {
+    alert('You lost the game!!');
+    alert('press F5 for Windows and CMD + R for mac to refresh the page');
   }
 }
